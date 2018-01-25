@@ -1,0 +1,150 @@
+{
+  "userTable": {
+    "primaryKey": "id",
+    "definition": {
+      "id": {
+        "type": "number",
+        "columnName": "_id",
+        "autoMigrations": {
+          "columnType": "integer",
+          "autoIncrement": true,
+          "unique": true
+        }
+      },
+      "first_name": {
+        "type": "string",
+        "autoMigrations": {
+          "columnType": "varchar"
+        },
+        "columnName": "first_name"
+      },
+      "last_name": {
+        "type": "string",
+        "autoMigrations": {
+          "columnType": "varchar"
+        },
+        "columnName": "last_name"
+      },
+      "type": {
+        "type": "string",
+        "autoMigrations": {
+          "columnType": "varchar"
+        },
+        "columnName": "type"
+      },
+      "age": {
+        "type": "number",
+        "allowNull": true,
+        "autoMigrations": {
+          "columnType": "integer"
+        },
+        "columnName": "age"
+      },
+      "obj": {
+        "type": "json",
+        "autoMigrations": {
+          "columnType": "json"
+        },
+        "columnName": "obj"
+      },
+      "status": {
+        "type": "boolean",
+        "autoMigrations": {
+          "columnType": "boolean"
+        },
+        "columnName": "status"
+      },
+      "avatar": {
+        "type": "ref",
+        "autoMigrations": {
+          "columnType": "text"
+        },
+        "columnName": "avatar"
+      },
+      "sort": {
+        "type": "json",
+        "autoMigrations": {
+          "columnType": "json"
+        },
+        "columnName": "sort"
+      },
+      "updatedAt": {
+        "type": "number",
+        "autoUpdatedAt": true,
+        "autoMigrations": {
+          "columnType": "bigint"
+        },
+        "columnName": "updatedAt"
+      },
+      "createdAt": {
+        "type": "number",
+        "autoCreatedAt": true,
+        "autoMigrations": {
+          "columnType": "bigint"
+        },
+        "columnName": "createdAt"
+      }
+    },
+    "tableName": "userTable",
+    "identity": "user"
+  },
+  "thingTable": {
+    "primaryKey": "id",
+    "definition": {
+      "id": {
+        "type": "number",
+        "columnName": "_id",
+        "autoMigrations": {
+          "columnType": "integer",
+          "autoIncrement": true,
+          "unique": true
+        }
+      },
+      "name": {
+        "type": "string",
+        "required": true,
+        "autoMigrations": {
+          "columnType": "varchar"
+        },
+        "columnName": "name"
+      },
+      "age": {
+        "type": "number",
+        "required": true,
+        "validations": {
+          "min": 5,
+          "max": 20
+        },
+        "autoMigrations": {
+          "columnType": "integer"
+        },
+        "columnName": "age"
+      },
+      "description": {
+        "type": "string",
+        "autoMigrations": {
+          "columnType": "varchar"
+        },
+        "columnName": "description"
+      },
+      "updatedAt": {
+        "type": "number",
+        "autoUpdatedAt": true,
+        "autoMigrations": {
+          "columnType": "bigint"
+        },
+        "columnName": "updatedAt"
+      },
+      "createdAt": {
+        "type": "number",
+        "autoCreatedAt": true,
+        "autoMigrations": {
+          "columnType": "bigint"
+        },
+        "columnName": "createdAt"
+      }
+    },
+    "tableName": "thingTable",
+    "identity": "thing"
+  }
+}

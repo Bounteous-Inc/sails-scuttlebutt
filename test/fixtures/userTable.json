@@ -1,0 +1,19 @@
+[{
+  "first_name": "Foo",
+  "last_name": "Bar",
+  "type": "Sometype",
+  "age": 1,
+  "obj": {
+    "nestedKey": true
+  },
+  "status": true
+},{
+  "first_name": "Biz",
+  "last_name": "Baz",
+  "type": "Othertype",
+  "age": 99,
+  "obj": {
+    "nestedKey": false
+  },
+  "status": false
+}]
